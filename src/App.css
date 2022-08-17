@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+:root {
+    --siteColor: #BB2339
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* open-sans-regular - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/open-sans-v34-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('./assets/fonts/open-sans-v34-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('./assets/fonts/open-sans-v34-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */ url('./assets/fonts/open-sans-v34-latin-regular.woff') format('woff'), /* Modern Browsers */ url('./assets/fonts/open-sans-v34-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */ url('./assets/fonts/open-sans-v34-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* open-sans-600 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./assets/fonts/open-sans-v34-latin-600.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('./assets/fonts/open-sans-v34-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('./assets/fonts/open-sans-v34-latin-600.woff2') format('woff2'), /* Super Modern Browsers */ url('./assets/fonts/open-sans-v34-latin-600.woff') format('woff'), /* Modern Browsers */ url('./assets/fonts/open-sans-v34-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */ url('./assets/fonts/open-sans-v34-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* open-sans-700 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/open-sans-v34-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('./assets/fonts/open-sans-v34-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('./assets/fonts/open-sans-v34-latin-700.woff2') format('woff2'), /* Super Modern Browsers */ url('./assets/fonts/open-sans-v34-latin-700.woff') format('woff'), /* Modern Browsers */ url('./assets/fonts/open-sans-v34-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */ url('./assets/fonts/open-sans-v34-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
 }
 
-.App-link {
-  color: #61dafb;
+/* inter-regular - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/inter-v12-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('./assets/fonts/inter-v12-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('./assets/fonts/inter-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */ url('./assets/fonts/inter-v12-latin-regular.woff') format('woff'), /* Modern Browsers */ url('./assets/fonts/inter-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */ url('./assets/fonts/inter-v12-latin-regular.svg#Inter') format('svg'); /* Legacy iOS */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* inter-600 - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./assets/fonts/inter-v12-latin-600.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('./assets/fonts/inter-v12-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('./assets/fonts/inter-v12-latin-600.woff2') format('woff2'), /* Super Modern Browsers */ url('./assets/fonts/inter-v12-latin-600.woff') format('woff'), /* Modern Browsers */ url('./assets/fonts/inter-v12-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */ url('./assets/fonts/inter-v12-latin-600.svg#Inter') format('svg'); /* Legacy iOS */
 }
+
+/* inter-700 - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/inter-v12-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('./assets/fonts/inter-v12-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('./assets/fonts/inter-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */ url('./assets/fonts/inter-v12-latin-700.woff') format('woff'), /* Modern Browsers */ url('./assets/fonts/inter-v12-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */ url('./assets/fonts/inter-v12-latin-700.svg#Inter') format('svg'); /* Legacy iOS */
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+body {
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    height: 50px;
+}
+
