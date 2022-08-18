@@ -1,5 +1,7 @@
+@import '~antd/dist/antd.css';
+
 :root {
-    --siteColor: #BB2339
+    --mainColor: #BB2339
 }
 
 /* open-sans-regular - latin */
@@ -78,16 +80,14 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     line-height: 1.5;
+    height: 100%;
+    margin: 0;
 }
 
 img {
     max-width: 100%;
     height: auto;
     vertical-align: middle;
-}
-
-body {
-    height: 100%;
 }
 
 #root {

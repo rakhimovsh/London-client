@@ -1,9 +1,10 @@
 import React, {FC} from 'react';
 import './App.css';
+import Dashboard from "./layouts/Dashboard";
 
 const App: FC = (): JSX.Element => {
     return (
-        <div>Hello world!</div>
+        <Dashboard />
     )
 }
 
