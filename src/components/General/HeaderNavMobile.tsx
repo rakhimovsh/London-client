@@ -1,9 +1,12 @@
 import React, {FC, useState} from 'react';
 import {Drawer} from "antd";
 import styled from "styled-components";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+
+import ButtonLog from "../Button";
 
 import {ReactComponent as Hamburger} from '../../assets/images/hamburgerMenu.svg'
+import {ButtonType} from "../../enums/button";
 
 
 const Button = styled.button`
@@ -33,14 +36,14 @@ const NavList = styled.ul`
   }
 `
 
-const ButtonLink = styled(Link)`
-  padding: 5px 20px;
-  border: 1px solid var(--mainColor);
-  border-radius: 100px;
-`
 
 const HeaderNavMobile: FC = (): JSX.Element => {
     const [visible, setVisible] = useState(false);
+    const navigate = useNavigate()
+
+    const handleBtnLogin = () => {
+        navigate('/login')
+    }
 
     const showDrawer = () => {
         setVisible(true);
@@ -61,7 +64,7 @@ const HeaderNavMobile: FC = (): JSX.Element => {
                     <li><Link to="/news">News</Link></li>
                     <li><Link to="/about">About Us</Link></li>
                     <li><Link to="/contact">Contact Us</Link></li>
-                    <li><ButtonLink to="/contact">Log in</ButtonLink></li>
+                    <li><ButtonLog type={ButtonType.RED_BORDER} onClick={handleBtnLogin}>Log in</ButtonLog></li>
                 </NavList>
             </Drawer>
         </>

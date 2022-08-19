@@ -1,6 +1,10 @@
 import React, {FC} from 'react';
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+
+import Button from "../Button";
+import {ButtonType} from "../../enums/button";
 
 const Nav = styled.nav`
   width: 100%;
@@ -27,14 +31,12 @@ const NavList = styled.ul`
 
 `
 
-const ButtonLink = styled(Link)`
-  padding: 10px 40px;
-  border: 1px solid #FFFFFF;
-  border-radius: 100px;
-`
-
 
 const HeaderNav: FC = (): JSX.Element => {
+    const navigate = useNavigate()
+    const handleBtnLogin = () => {
+        navigate('/login')
+    }
     return (
         <Nav>
             <NavList>
@@ -42,7 +44,8 @@ const HeaderNav: FC = (): JSX.Element => {
                 <li><Link to="/news">News</Link></li>
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="/contact">Contact Us</Link></li>
-                <li><ButtonLink to="/contact">Log in</ButtonLink></li>
+                <li><Button type={ButtonType.LIGHT} onClick={handleBtnLogin}>Log in</Button></li>
+
             </NavList>
         </Nav>
     );

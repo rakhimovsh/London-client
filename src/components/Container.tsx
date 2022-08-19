@@ -9,15 +9,13 @@ const SiteContainer = styled.div`
 `
 
 type Props = {
-    children: JSX.Element | string
+    children: JSX.Element[] | JSX.Element
 }
 
 const Container: FC<Props> = ({children}): JSX.Element => {
     return (
         <SiteContainer>
-            <>
-                {children}
-            </>
+            {children}
         </SiteContainer>
     );
 };
